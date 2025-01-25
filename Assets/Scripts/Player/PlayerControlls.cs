@@ -61,8 +61,11 @@ public class PlayerControlls : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        _rb.AddForce(Vector2.up * _jumpForce);
-        _canJump = false;
+        if (_canJump)
+        {
+            _rb.AddForce(Vector2.up * _jumpForce);
+            _canJump = false;
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
