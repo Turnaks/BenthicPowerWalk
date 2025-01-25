@@ -5,7 +5,7 @@ public class MainMenu : MonoBehaviour
 {
     public void OnPlayClick()
     {
-        SceneManager.LoadScene("IngameUI");
+        SceneManager.LoadScene("GroﬂerPowerWalk");
         //SceneManager.UnloadSceneAsync("MainMenu");
     }
 

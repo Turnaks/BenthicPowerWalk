@@ -3,9 +3,19 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    public void OnEnable()
+    {
+        Time.timeScale = 0.0f;
+    }
+
+    public void OnDisable()
+    {
+        Time.timeScale = 1.0f;
+    }
+
     public void OnContinueClick()
     {
-        SceneManager.UnloadSceneAsync("PauseMenu");        
+        gameObject.SetActive(false);
     }
 
     public void OnExitClick()

@@ -24,6 +24,12 @@ public class PlayerControlls : MonoBehaviour
     [SerializeField]
     private bool _canJump = true;
 
+    [SerializeField]
+    private float _jumpCooldown = 0.2f;
+
+    [SerializeField]
+    private float _jumpTimer;
+
     private Rigidbody2D _rb;
 
     [SerializeField]
@@ -39,6 +45,7 @@ public class PlayerControlls : MonoBehaviour
     void Update()
     {
         Walk();
+        JumpTimer();
     }
 
     public void OnWalk(InputAction.CallbackContext context)
@@ -65,16 +72,26 @@ public class PlayerControlls : MonoBehaviour
         {
             _rb.AddForce(Vector2.up * _jumpForce);
             _canJump = false;
+            _jumpTimer = _jumpCooldown;
         }
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    private void JumpTimer()
+    {
+        if (_jumpTimer > 0f)
+        {
+            _jumpTimer -= Time.deltaTime;
+        }
+    }
+
+    public void OnCollisionStay2D(Collision2D collision)
     {
         if (collision == null)
             return;
 
         
-        if (GetComponent<Collider2D>().IsTouching(collision.collider, _filter))
+        if (GetComponent<Collider2D>().IsTouching(collision.collider, _filter) &
+            _jumpTimer <= 0)
         {
             _canJump = true;
         }
