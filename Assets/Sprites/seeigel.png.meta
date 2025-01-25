@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      seeigel_0: -1669872261798354857
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

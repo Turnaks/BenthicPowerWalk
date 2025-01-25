@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sandstein ganzer block_0: -4123922370498863528
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

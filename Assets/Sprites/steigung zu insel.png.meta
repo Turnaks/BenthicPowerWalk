@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      steigung zu insel_0: -3557053354104551123
+      steigung zu insel_1: -2010847940114226164
+      steigung zu insel_2: 1307529155386468676
+      steigung zu insel_3: 1078176040364812772
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

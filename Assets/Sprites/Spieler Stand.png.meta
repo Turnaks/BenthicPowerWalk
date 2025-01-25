@@ -472,7 +472,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Spieler Stand_0: -5053513497935406922
+      Spieler Stand_1: -2448621316430610205
+      Spieler Stand_10: 3137294397207916747
+      Spieler Stand_11: -4738099093654498736
+      Spieler Stand_12: 5354782015639723129
+      Spieler Stand_13: -7517150547064081536
+      Spieler Stand_2: 4548988301879833728
+      Spieler Stand_3: 8846128241632610757
+      Spieler Stand_4: -1260805038865027362
+      Spieler Stand_5: -9025754396059836254
+      Spieler Stand_6: -839194684324400578
+      Spieler Stand_7: -627224805783106966
+      Spieler Stand_8: -1720335977781430961
+      Spieler Stand_9: 7867356530605304760
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

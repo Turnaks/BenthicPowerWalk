@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sandstein eckblock_0: 5763829912560311462
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

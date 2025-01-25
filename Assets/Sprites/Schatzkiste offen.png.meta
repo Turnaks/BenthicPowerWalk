@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Schatzkiste offen_0: -8690835328068196418
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Schatzkiste geschlossen_0: -2117221933662766927
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

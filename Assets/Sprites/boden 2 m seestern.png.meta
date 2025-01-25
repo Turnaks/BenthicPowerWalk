@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      boden 2 m seestern_0: -8234667725492286945
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

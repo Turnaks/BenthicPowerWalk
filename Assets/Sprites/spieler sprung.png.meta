@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spieler sprung_0: 5875126503537338891
+      spieler sprung_1: -3995456345298455670
+      spieler sprung_2: 4788526930766193335
+      spieler sprung_3: 3851652810741513753
+      spieler sprung_4: 3412266899226529717
+      spieler sprung_5: -1319468293229050455
+      spieler sprung_6: -2429255008009931635
+      spieler sprung_7: 4430280843175550338
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
