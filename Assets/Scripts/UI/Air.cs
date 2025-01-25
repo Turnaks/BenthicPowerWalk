@@ -2,14 +2,16 @@ using UnityEngine;
 
 public class Air : MonoBehaviour
 {
-    public float CurrentAir = 0;
-    public float MaxAir = 60;
+    float CurrentAir = 0;
+    [SerializeField]
+    float MaxAir;
 
     public AirBar AirBar;
 
     private void Start()
     {
         CurrentAir = MaxAir;
+        AirBar.DisplayMax=MaxAir;
     }
 
     private void Update()
@@ -21,5 +23,8 @@ public class Air : MonoBehaviour
         AirBar.UpdateAir(CurrentAir);
     }
 
-
+    public void LooseAir(float toLoose)
+    {
+        CurrentAir -= toLoose;
+    }
 }

@@ -1,18 +1,43 @@
+using System.Dynamic;
 using UnityEngine;
 
 public class CrabBehaviour : MonoBehaviour
 {
+    [SerializeField]
     GameObject player;
+    [SerializeField]
+    GameObject crab;
+    [SerializeField]
+    GameObject territory;
+    [SerializeField]
+    Rigidbody2D enemyRB;
+    [SerializeField]
+    float enemySpeed;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    TerritoryCheck territoryCheck;
+
+    private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        territoryCheck = territory.GetComponent<TerritoryCheck>();
     }
-
     // Update is called once per frame
     void Update()
     {
-        
+        if (territoryCheck.PlayerInTerritory)
+            moveTowardPlayer();
+        else
+            rest();
+    }
+
+    void moveTowardPlayer()
+    {
+        if (player.transform.position.x < crab.transform.position.x)
+            enemyRB.linearVelocityX = -enemySpeed;
+        else
+            enemyRB.linearVelocityX = enemySpeed;
+    }
+    void rest()
+    {
+        enemyRB.linearVelocityX = 0;
     }
 }
