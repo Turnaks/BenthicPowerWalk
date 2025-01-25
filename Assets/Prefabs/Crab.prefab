@@ -103,8 +103,8 @@ GameObject:
   - component: {fileID: 3248073504084411922}
   - component: {fileID: 4892079906199507672}
   - component: {fileID: 7760158034481064492}
-  - component: {fileID: 7269838984161343903}
   - component: {fileID: 1592880398889002733}
+  - component: {fileID: 5417637218940671628}
   m_Layer: 0
   m_Name: Crab
   m_TagString: Untagged
@@ -121,7 +121,7 @@ Transform:
   m_GameObject: {fileID: 7072563712043299188}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.02, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -173,7 +173,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 13ed3c7c2ed95d94fa05f5a1a81cd7de, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -199,7 +199,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -211,8 +211,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &7269838984161343903
-CircleCollider2D:
+--- !u!114 &1592880398889002733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7072563712043299188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e7c6c708e72fc438f6b269664db8ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  crab: {fileID: 7072563712043299188}
+  territory: {fileID: 6490092667397161418}
+  enemyRB: {fileID: 7760158034481064492}
+  enemySpeed: 1
+--- !u!70 &5417637218940671628
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -245,25 +262,9 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
---- !u!114 &1592880398889002733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7072563712043299188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86e7c6c708e72fc438f6b269664db8ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  crab: {fileID: 7072563712043299188}
-  territory: {fileID: 6490092667397161418}
-  enemyRB: {fileID: 7760158034481064492}
-  enemySpeed: 0
+  m_Offset: {x: -0.009750906, y: -0.025350513}
+  m_Size: {x: 1.1668963, y: 0.6013763}
+  m_Direction: 1
 --- !u!1 &8118991955341434465
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,4 +348,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  attackStrength: 0
+  attackStrength: 3
