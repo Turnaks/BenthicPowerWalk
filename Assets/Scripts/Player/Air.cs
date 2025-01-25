@@ -7,12 +7,13 @@ public class Air : MonoBehaviour
     [SerializeField]
     float MaxAir;
 
-    public AirBar AirBar;
+    [SerializeField]
+    AirBar AirBar;
 
     private void Start()
     {
         CurrentAir = MaxAir;
-        AirBar.DisplayMax=MaxAir;
+        AirBar.SetMaxDisplay(MaxAir);
     }
 
     private void Update()
