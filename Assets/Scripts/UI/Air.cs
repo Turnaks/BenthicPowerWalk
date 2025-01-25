@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Air : MonoBehaviour
 {
@@ -16,10 +17,14 @@ public class Air : MonoBehaviour
 
     private void Update()
     {
-        if (CurrentAir >= 0)
+        if (CurrentAir > 0)
             CurrentAir -= Time.deltaTime;
         else
+        {
             CurrentAir = 0;
+            SceneManager.LoadScene("GameOver");
+        }
+
         AirBar.UpdateAir(CurrentAir);
     }
 
