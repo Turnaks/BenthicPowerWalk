@@ -72,7 +72,7 @@ public class PlayerControlls : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (_canJump)
+        if (_canJump & context.started)
         {
             _rb.AddForce(Vector2.up * _jumpForce);
             _canJump = false;
