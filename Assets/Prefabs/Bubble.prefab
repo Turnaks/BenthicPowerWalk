@@ -137,6 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078344fe8c75f384ebb12e185f9ec828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  bubble: {fileID: 2022384143138607436}
-  airGain: 30
+  _airGain: 30
+  _trigger: {fileID: 2027748271576111847}
+  _spriteRenderer: {fileID: 320300005767707739}
+  _bubbleCooldown: 20

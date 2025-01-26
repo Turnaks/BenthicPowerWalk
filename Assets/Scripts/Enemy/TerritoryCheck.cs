@@ -3,17 +3,18 @@ using UnityEngine;
 
 public class TerritoryCheck : MonoBehaviour
 {
-    public bool PlayerInTerritory = false;
+    [SerializeField]
+    private GameObject _crab;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag=="Player")
-            PlayerInTerritory=true;
+            _crab.GetComponent<CrabBehaviour>().Alert(collision.gameObject);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
-            PlayerInTerritory = false;
+            _crab.GetComponent<CrabBehaviour>().Calm();
     }
 }
