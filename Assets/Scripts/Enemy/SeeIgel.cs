@@ -17,7 +17,7 @@ public class SeeIgel : MonoBehaviour
         if (!collision.gameObject.TryGetComponent<Air>(out Air air))
             return;
 
-        air.ChangeAir(-_attackPower);
+        air.GainAir(-_attackPower);
 
         if (!collision.gameObject.TryGetComponent<PlayerControlls>(out PlayerControlls plCon))
             return;

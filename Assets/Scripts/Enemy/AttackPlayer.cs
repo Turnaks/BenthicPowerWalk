@@ -16,6 +16,6 @@ public class AttackPlayer : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
-            playerAir.ChangeAir(attackStrength);
+            playerAir.LooseAir(attackStrength);
     }
 }
