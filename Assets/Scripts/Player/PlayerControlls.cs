@@ -39,6 +39,9 @@ public class PlayerControlls : MonoBehaviour
     [SerializeField]
     private Vector3 _lastGrounded = Vector3.zero;
 
+    [SerializeField]
+    private SpriteRenderer _spriteRenderer;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -55,6 +58,10 @@ public class PlayerControlls : MonoBehaviour
     public void OnWalk(InputAction.CallbackContext context)
     {
         _motion = context.ReadValue<float>();
+        if (_motion > 0)
+            _spriteRenderer.flipX = false;
+        else if (_motion < 0)
+            _spriteRenderer.flipX = true;
     }
 
     private void Walk()

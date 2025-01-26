@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5f198b21c920c635a807722d47fde92e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -174,6 +174,8 @@ MonoBehaviour:
   _slowDownRate: 0.5
   _jumpForce: 100
   _canJump: 1
+  _jumpCooldown: 0.2
+  _jumpTimer: 0
   _filter:
     useTriggers: 0
     useLayerMask: 1
@@ -188,6 +190,8 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 45
     maxNormalAngle: 135
+  _lastGrounded: {x: 0, y: 0, z: 0}
+  _spriteRenderer: {fileID: 5483541493430569365}
 --- !u!114 &2094861492420429113
 MonoBehaviour:
   m_ObjectHideFlags: 0
