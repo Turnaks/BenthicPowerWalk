@@ -9,14 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 991f771d1d3bc144d93cbb2179b297af
   - enabled: 1
-    path: Assets/Scenes/IngameUI.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 5a6bf4b97ddf22049af07fccbba7c493
   - enabled: 1
     path: "Assets/Scenes/Gro\xDFerPowerWalk.unity"
     guid: 0d77329962430c3e192f2426d83a7769
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: 785b07d286e84ce40936722989bfe834
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
