@@ -10,6 +10,9 @@ public class Air : MonoBehaviour
     [SerializeField]
     AirBar AirBar;
 
+    [SerializeField]
+    private bool _isInvincible = false;
+
     private void Start()
     {
         CurrentAir = MaxAir;
@@ -20,17 +23,16 @@ public class Air : MonoBehaviour
     {
         if (CurrentAir > 0)
             CurrentAir -= Time.deltaTime;
-        else
+        else if(!_isInvincible)
         {
-            CurrentAir = 0;
             SceneManager.LoadScene("GameOver");
         }
 
         AirBar.UpdateAir(CurrentAir);
     }
 
-    public void LooseAir(float toLoose)
+    public void ChangeAir(float change)
     {
-        CurrentAir -= toLoose;
+        CurrentAir += change;
     }
 }

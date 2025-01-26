@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -34,6 +35,9 @@ public class PlayerControlls : MonoBehaviour
 
     [SerializeField]
     private ContactFilter2D _filter;
+
+    [SerializeField]
+    private Vector3 _lastGrounded = Vector3.zero;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -94,6 +98,12 @@ public class PlayerControlls : MonoBehaviour
             _jumpTimer <= 0)
         {
             _canJump = true;
+            _lastGrounded = transform.position;
         }
+    }
+
+    internal void BackTrack()
+    {
+        transform.position = _lastGrounded;
     }
 }
