@@ -19,16 +19,28 @@ public class Air : MonoBehaviour
         AirBar.SetMaxDisplay(MaxAir);
     }
 
-    private void Update()
+    public void Update()
     {
+        ManageAir();
+        AirBar.UpdateAir(CurrentAir);
+    }
+
+    private void ManageAir()
+    {
+        if (_isInvincible)
+        {
+            CurrentAir = MaxAir;
+            return;
+        }
+
         if (CurrentAir > 0)
+        {
             CurrentAir -= Time.deltaTime;
-        else if(!_isInvincible)
+        }
+        else
         {
             SceneManager.LoadScene("GameOver");
         }
-
-        AirBar.UpdateAir(CurrentAir);
     }
 
     public void GainAir(float airGain)
