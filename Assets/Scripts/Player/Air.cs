@@ -31,8 +31,14 @@ public class Air : MonoBehaviour
         AirBar.UpdateAir(CurrentAir);
     }
 
-    public void ChangeAir(float change)
+    public void GainAir(float airGain)
     {
-        CurrentAir += change;
+        CurrentAir += airGain;
+        if (CurrentAir > MaxAir)
+            CurrentAir = MaxAir;
+    }
+    public void LooseAir(float airLoss)
+    {
+        CurrentAir -= airLoss;
     }
 }
