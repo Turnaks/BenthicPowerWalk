@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b694e279020ee48a0562f44a69a95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerInTerritory: 0
+  _crab: {fileID: 7072563712043299188}
 --- !u!1 &7072563712043299188
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,11 +223,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e7c6c708e72fc438f6b269664db8ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  crab: {fileID: 7072563712043299188}
-  territory: {fileID: 6490092667397161418}
-  enemyRB: {fileID: 7760158034481064492}
-  enemySpeed: 1
+  _player: {fileID: 0}
+  _territory: {fileID: 6490092667397161418}
+  _enemyRB: {fileID: 7760158034481064492}
+  _enemySpeed: 0
 --- !u!70 &5417637218940671628
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -347,5 +346,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f1ea29863a49a44a869e173ca411db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  attackStrength: 3
+  attackStrength: 10

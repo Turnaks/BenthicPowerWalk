@@ -192,6 +192,7 @@ MonoBehaviour:
     minNormalAngle: 45
     maxNormalAngle: 135
   _lastGrounded: {x: 0, y: 0, z: 0}
+  _spriteRenderer: {fileID: 5483541493430569365}
 --- !u!114 &2094861492420429113
 MonoBehaviour:
   m_ObjectHideFlags: 0

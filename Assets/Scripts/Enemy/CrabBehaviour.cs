@@ -4,40 +4,47 @@ using UnityEngine;
 public class CrabBehaviour : MonoBehaviour
 {
     [SerializeField]
-    GameObject player;
+    GameObject _player;
     [SerializeField]
-    GameObject crab;
+    Rigidbody2D _enemyRB;
     [SerializeField]
-    GameObject territory;
-    [SerializeField]
-    Rigidbody2D enemyRB;
-    [SerializeField]
-    float enemySpeed;
+    float _enemySpeed;
 
-    TerritoryCheck territoryCheck;
+    private bool _isAlerted;
 
     private void Start()
     {
-        territoryCheck = territory.GetComponent<TerritoryCheck>();
+        
     }
     // Update is called once per frame
     void Update()
     {
-        if (territoryCheck.PlayerInTerritory)
+        if (_isAlerted)
             moveTowardPlayer();
         else
             rest();
     }
 
+    public void Alert(GameObject player)
+    {
+        _isAlerted = true;
+        _player = player;
+    }
+
+    public void Calm()
+    {
+        _isAlerted = false;
+    }
+
     void moveTowardPlayer()
     {
-        if (player.transform.position.x < crab.transform.position.x)
-            enemyRB.linearVelocityX = -enemySpeed;
+        if (_player.transform.position.x < transform.position.x)
+            _enemyRB.linearVelocityX = -_enemySpeed;
         else
-            enemyRB.linearVelocityX = enemySpeed;
+            _enemyRB.linearVelocityX = _enemySpeed;
     }
     void rest()
     {
-        enemyRB.linearVelocityX = 0;
+        _enemyRB.linearVelocityX = 0;
     }
 }
